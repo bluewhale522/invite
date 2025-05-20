@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp Mời Lễ Tốt Nghiệp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 380px;
+      height: 540px;
+    }
+
+
+    .floating-img {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: orbit 10s linear infinite;
+    }
+
+
+    .floating-img:nth-child(1) { animation-delay: 0s; top: -30px; left: 50%; transform: translateX(-50%); }
+    .floating-img:nth-child(2) { animation-delay: 2s; top: 20%; left: -30px; }
+    .floating-img:nth-child(3) { animation-delay: 4s; bottom: -30px; left: 50%; transform: translateX(-50%); }
+    .floating-img:nth-child(4) { animation-delay: 6s; top: 20%; right: -30px; }
+
+    @keyframes orbit {
+      0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    /* Thiệp lật */
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flip-card-front {
+      background: #fff;
+      color: #333;
+    }
+
+    .flip-card-back {
+      background: #f9f9ff;
+      color: #003366;
+      transform: rotateY(180deg);
+    }
+
+    .image {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .back-text {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
+    }
+
+    @media screen and (max-width: 500px) {
+      .container {
+        height: 480px;
+      }
+
+      .floating-img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .image {
+        height: 220px;
+      }
+
+      h1 {
+        font-size: 1.3em;
+      }
+
+      .back-text {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img class="image" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/480687606_942485231337964_4850265601374241273_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=aQDe03THCrAQ7kNvwHEX9At&_nc_oc=AdlRE9v0oFotyEsufJ3Tjah8Oi7VW9S12itPeNEBbsFABUnvRww_hmPrnD9Gz9E55jb9du2fHMaWIVq0qtqt6RVd&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=oBnPU3iJEKni8JZnFxAhRw&oh=00_AfLiZpTRO6KoUGirYaJI7j9Ldb0NkGEOm9qL0pBtnUxamQ&oe=68320380" alt="Graduation Front" />
+          <div class="content">
+            <h1>🎓 Thiệp Mời<br />Lễ Tốt Nghiệp</h1>
+            <p>Click để xem thông tin chi tiết!</p>
+          </div>
+        </div>
+
+
+        <div class="flip-card-back">
+          <img class="image" src="https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/481148587_941702578082896_1478077151835184857_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=mQ8BDnFQRBcQ7kNvwEtfcGS&_nc_oc=Adm8Pj2jiFXBcWYyHT8OOeFwhEo5Q1ala2woJAHmDvkVkxkbnfSuUpyv_g5rTgJWokG2UHvG7b-A-ujtC-3BumoH&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=mhp7aTwwjDT4M3Uekou35g&oh=00_AfIX53c2qX-fVsWNW9F7gWgEpw1jUvJ2maQxLJ8X9_nznA&oe=683212D6" alt="Graduation Back" />
+          <div class="content">
+            <div class="back-text"><strong>⏰ Thời gian:</strong> 9h00, 23/05/2025</div>
+            <div class="back-text"><strong>📍 Địa điểm:</strong> Trường Đại học Sư phạm Thái Nguyên</div>
+            <div class="back-text">Trân trọng kính mời quý thầy cô, bạn bè và gia đình<br />đến chung vui cùng mình!</div>
+            <div class="signature">Thân mời,<br />Bảo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
